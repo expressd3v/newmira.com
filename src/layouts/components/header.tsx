@@ -7,57 +7,61 @@ import {Stack} from "@mui/system";
 const LayoutHeader: FC = () => {
     return (
         <AppBar
-            sx={{height: 56}}
+            sx={{height: 80}}
             elevation={0}
-            position="fixed"
+            position="absolute"
             color="transparent">
             <Toolbar
-                style={{minHeight: "56px"}}>
-                <Container maxWidth="xl">
-                    <Stack
-                        sx={{
-                            width: "100%",
-                            justifyContent: "space-between",
+                style={{minHeight: "80px"}}>
+                <Stack
+                    sx={{
+                        width: "100%",
+                        justifyContent: "space-between",
+                        alignItems: "center"
+                    }}
+                    spacing={2}
+                    direction="row">
+                    <Link
+                        style={{
+                            display: "flex",
+                            paddingTop: 12,
                             alignItems: "center"
                         }}
-                        spacing={2}
-                        direction="row">
-                        <Link
-                            style={{
-                                display: "flex",
-                                paddingTop: 8,
-                                alignItems: "center"
-                            }}
-                            href="/">
-                            <Image
-                                style={{height: 48, width: "auto"}}
-                                width={147}
-                                height={117}
-                                src="/newmira.png"
-                                alt="Newmira Digital"/>
-                        </Link>
+                        href="/">
+                        <Image
+                            style={{height: "40px", width: "auto"}}
+                            width={147}
+                            height={117}
+                            src="/logo-light.png"
+                            alt="Newmira Digital"/>
+                    </Link>
 
+                    <Stack
+                        sx={{
+                            alignItems: "center"
+                        }}
+                        spacing={3}
+                        direction="row">
                         <Stack
-                            sx={{
-                                alignItems: "center"
-                            }}
                             spacing={1}
                             direction="row">
-                            <Button>
-                                Home
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                color="primary">
+                                +1 253 533 2244
                             </Button>
-                            <Button>
-                                Services
-                            </Button>
-                            <Button>
-                                Expertise
-                            </Button>
-                            <Button>
-                                Contact
-                            </Button>
+
                         </Stack>
+                        <Button
+                            disableElevation
+                            variant="contained"
+                            size="large"
+                            color="primary">
+                            Conversation Now
+                        </Button>
                     </Stack>
-                </Container>
+                </Stack>
             </Toolbar>
         </AppBar>
     );

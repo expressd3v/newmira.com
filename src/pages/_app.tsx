@@ -1,5 +1,7 @@
 import type {AppProps} from 'next/app'
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import "@/utils/style/global.css"
+
 
 export default function App({Component, pageProps}: AppProps) {
     const theme = createTheme({

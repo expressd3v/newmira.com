@@ -3,6 +3,8 @@ import {NextPage} from "next";
 import {Button} from "@mui/material";
 import AppLayout from "@/layouts";
 import {SeoProps} from "@/utils/types/layout.type";
+import HomeHero from "@/components/home/hero";
+import HomeAbout from "@/components/home/about";
 
 const pageSeo: SeoProps = {
     title: "Newmira Digital, LLC",
@@ -13,12 +15,8 @@ const pageSeo: SeoProps = {
 const HomePage: NextPage = () => {
     return (
         <AppLayout seo={pageSeo}>
-            {/*<Button*/}
-            {/*    disableElevation*/}
-            {/*    variant="contained"*/}
-            {/*    color="secondary">*/}
-            {/*    Home*/}
-            {/*</Button>*/}
+            <HomeHero/>
+            <HomeAbout/>
         </AppLayout>
     );
 };
