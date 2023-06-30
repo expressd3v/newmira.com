@@ -7,20 +7,43 @@ export default function App({Component, pageProps}: AppProps) {
     const theme = createTheme({
         palette: {
             primary: {
-                light: "#1f1f1f",
-                main: "#1f1f1f",
-                dark: "#1f1f1f",
-                contrastText: "#ffffff"
-            },
-            secondary: {
                 light: "#f6e009",
                 main: "#f6e009",
                 dark: "#f6e009",
-                contrastText: "#1f1f1f"
+                contrastText: "#0B0F15"
+            },
+            secondary: {
+                light: "#0B0F15",
+                main: "#0B0F15",
+                dark: "#0B0F15",
+                contrastText: "#f6e009"
+            },
+            info: {
+                light: "#ffffff",
+                main: "#ffffff",
+                dark: "#ffffff",
+                contrastText: "#000000"
+            },
+            mode: "dark",
+            background: {
+                default: "#0B0F15",
+                paper: "#1B2837"
             }
         },
         typography: {
             fontFamily: "'Roboto Mono', monospace"
+        },
+        components: {
+            MuiButton: {
+                styleOverrides: {
+                    sizeLarge: {
+                        borderRadius: 500
+                    },
+                    sizeMedium: {
+                        borderRadius: 500
+                    }
+                }
+            }
         }
     })
 

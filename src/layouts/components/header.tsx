@@ -3,8 +3,11 @@ import {AppBar, Button, Container, Toolbar, Typography} from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import {Stack} from "@mui/system";
+import {useRouter} from "next/router";
 
 const LayoutHeader: FC = () => {
+    const router: any = useRouter();
+
     return (
         <AppBar
             sx={{height: 80}}
@@ -21,20 +24,7 @@ const LayoutHeader: FC = () => {
                     }}
                     spacing={2}
                     direction="row">
-                    <Link
-                        style={{
-                            display: "flex",
-                            paddingTop: 12,
-                            alignItems: "center"
-                        }}
-                        href="/">
-                        <Image
-                            style={{height: "40px", width: "auto"}}
-                            width={147}
-                            height={117}
-                            src="/logo-light.png"
-                            alt="Newmira Digital"/>
-                    </Link>
+                    <div/>
 
                     <Stack
                         sx={{
@@ -43,22 +33,21 @@ const LayoutHeader: FC = () => {
                         spacing={3}
                         direction="row">
                         <Stack
-                            spacing={1}
+                            spacing={.5}
                             direction="row">
                             <Button
+                                href="tel:+1 253 533 2244"
                                 variant="outlined"
-                                size="large"
-                                color="primary">
+                                color="info">
                                 +1 253 533 2244
                             </Button>
-
                         </Stack>
                         <Button
+                            onClick={()=>{router.push("/contact")}}
                             disableElevation
                             variant="contained"
-                            size="large"
                             color="primary">
-                            Conversation Now
+                            Contact Us
                         </Button>
                     </Stack>
                 </Stack>
