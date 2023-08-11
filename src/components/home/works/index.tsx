@@ -35,8 +35,8 @@ const HomeWorks: FC = () => {
                         <div className="action-card">
                             <h3 className="action-title">not impressed?</h3>
                             <p>
-                                So, if you're not impressed yet, we invite you to dive into our portfolio and discover
-                                the remarkable projects we've had the privilege to work on. We're confident that you'll
+                                We invite you to dive into our portfolio and discover
+                                the remarkable projects we&apos;ve had the privilege to work on. We&apos;re confident that you&apos;ll
                                 be impressed by our track record of success and the caliber of solutions we deliver.
                             </p>
                             <Button

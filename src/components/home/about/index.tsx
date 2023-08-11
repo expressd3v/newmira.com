@@ -20,6 +20,16 @@ const HomeAbout: FC = () => {
             img: "/svgs/components.svg"
         },
         {
+            title: "e-Commerce",
+            description: "we specialize in creating powerful and seamless ecommerce solutions that empower businesses to thrive in the online marketplace.",
+            img: "/svgs/ecommerce.svg"
+        },
+        {
+            title: "Database ",
+            description: "Our team of skilled database developers designs and builds robust and scalable database solutions tailored to your specific requirements. ",
+            img: "/svgs/db.svg"
+        },
+        {
             title: "UI/UX DESIGNING",
             description: "Our talented team of UI/UX designers is dedicated to creating visually stunning, intuitive, and user-friendly designs that captivate and engage your target audience.",
             img: "/svgs/ux.svg"
@@ -43,19 +53,21 @@ const HomeAbout: FC = () => {
 
     return (
         <HomeAboutWrap>
-            <Container maxWidth="xl">
-                <h2>What <span>We do?</span></h2>
+            <Container
+                maxWidth="xl">
+                <h2>What <span>We do:</span></h2>
                 <Grid
-                    spacing={3}
+                    justifyContent="center"
+                    spacing={{xs: 3}}
                     container>
                     {
                         projects.map((project, index) => (
-                            <Grid xs={3} key={index}>
+                            <Grid lg={3} md={4} sm={6} xs={12} key={index}>
                                 <ProjectCard project={project}/>
                             </Grid>
                         ))
                     }
-                    <Grid xs={6}>
+                    <Grid lg={6} xs={12}>
                         <div className="action-card">
                             <h3 className="action-title">Solutions for<br/> your <span>business</span></h3>
                             <p>
@@ -79,12 +91,16 @@ const HomeAbout: FC = () => {
 
 
 const HomeAboutWrap = styled.section`
-  padding: 150px 0 200px;
+  padding: 150px 0 150px;
   min-height: 100vh;
   //background-color: #222222;
   border-top: 1px solid #ffffff0f;
   border-bottom: 1px solid #ffffff0f;
-
+  @media(max-width: 600px) {
+    padding: 60px 0;
+  }
+  
+  
   h2 {
     font-size: 42px;
     text-align: center;
@@ -95,28 +111,50 @@ const HomeAboutWrap = styled.section`
     span {
       color: #f6e009;
     }
+
+    @media(max-width: 600px) {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
   }
 
   .action-card {
     padding: 52px;
+    text-align: center;
+    
+    @media(max-width: 600px) {
+      padding: 12px;
+    }
 
     h3 {
+      text-align: center;
       color: #f0f0f0;
-      font-size: 28px;
+      font-size: 36px;
       line-height: 1.2;
       margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 4px;
-
+      
+      @media(max-width: 600px) {
+        font-size: 26px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+      }
       span {
         color: #f6e009;
       }
     }
 
     p {
+      text-align: center;
       font-size: 20px;
       margin-bottom: 42px;
       padding-right: 20px;
+      @media(max-width: 600px) {
+        font-size: 18px;
+        letter-spacing: .2px;
+        margin-bottom: 16px;
+      }
     }
   }
 `

@@ -26,8 +26,8 @@ const AboutHero: FC = () => {
                     spacing={3}
                     alignItems="center"
                     container>
-                    <Grid xs={8}>
-                        <h1>Unleashing Digital Excellence with <span>Newmira Digital</span></h1>
+                    <Grid order={{lg: 1, xs: 2}} lg={8} xs={12}>
+                        <h1>Unleashing<br/> Digital Excellence with <br/><span>Newmira Digital</span></h1>
                         <p>
                             Welcome to Newmira Digital, a leading software development company dedicated to unleashing
                             digital excellence for businesses worldwide. With a passion for innovation and a commitment
@@ -35,7 +35,7 @@ const AboutHero: FC = () => {
                             landscape.
                         </p>
                     </Grid>
-                    <Grid xs={4}>
+                    <Grid order={{lg: 2, xs: 1}} lg={4} xs={12}>
                         <Lottie animationData={illus}/>
                     </Grid>
                 </Grid>
@@ -51,11 +51,20 @@ const AboutHeroWrap = styled.section`
   display: flex;
   align-items: center;
 
+  @media(max-width: 600px) {
+    padding: 160px 0 60px;
+  }
 
   .logo {
     position: absolute;
     top: 60px;
     left: 110px;
+
+    @media(max-width: 600px) {
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   svg {
@@ -68,6 +77,9 @@ const AboutHeroWrap = styled.section`
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 24px;
+    @media(max-width: 600px) {
+      font-size: 36px;
+    }
 
     span {
       color: #f6e009;

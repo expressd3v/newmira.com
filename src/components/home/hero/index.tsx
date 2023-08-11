@@ -1,11 +1,9 @@
 import React, {FC, useState} from 'react';
 import styled from "@emotion/styled";
-import {Box, Button, ButtonBase, Container, Fade, Modal, Paper, Stack} from "@mui/material";
+import {Box, Button, Container, Fade, Modal, Stack} from "@mui/material";
 import Grid from "@mui/system/Unstable_Grid";
 import Image from "next/image";
 import Link from "next/link";
-import Lottie from "lottie-react";
-import playData from "./animation/play.json"
 import Player from "@/components/shared/player";
 import {useRouter} from "next/router";
 
@@ -33,19 +31,21 @@ const HomeHero: FC = () => {
                     justifyContent="space-between"
                     spacing={5}
                     container>
-                    <Grid xs={5}>
+                    <Grid lg={5} xs={12}>
                         <h1>
                             <span>
-                                Innovate With
+                                Innovate Your
                             </span>&nbsp;<br/>
                             WEB<br/>
                             MOBILE<br/>
                             Database<br/>
+                            e-Commerce
 
                         </h1>
                         <p>
-                            Say goodbye to slow and expensive IT solutions,
-                            and hello to high-quality results that wow.
+                            Newmira Digital is a leading software, website, database, mobile and e-commerce development
+                            company. With a passion for innovation and a commitment to
+                            delivering top-notch solutions, we empower organizations to thrive in the digital landscape.
                         </p>
                         <Stack
                             spacing={2}
@@ -55,12 +55,16 @@ const HomeHero: FC = () => {
                                 color="secondary"
                                 size="large"
                                 variant="contained"
-                                onClick={()=>{router.push("/contact")}}
+                                onClick={() => {
+                                    router.push("/contact")
+                                }}
                                 className="action-button">
                                 Contact Us
                             </Button>
                             <Button
-                                onClick={()=>{router.push("/about")}}
+                                onClick={() => {
+                                    router.push("/about")
+                                }}
                                 color="secondary"
                                 size="large"
                                 variant="outlined"
@@ -72,18 +76,17 @@ const HomeHero: FC = () => {
                 </Grid>
             </Container>
             <div className="image-wrap">
-                <Image
-                    width={1852}
-                    height={1240}
-                    src="/temp/image1.jpg"
-                    alt="Hero Image"/>
-                <ButtonBase onClick={()=>{setOpen(true)}}>
-                    <Lottie animationData={playData} />
-                </ButtonBase>
+                <video
+                    autoPlay
+                    loop
+                    src="/videos/cover.mp4"
+                    muted/>
             </div>
             <div className="circle1"></div>
             <Modal
-                onClose={()=>{setOpen(false)}}
+                onClose={() => {
+                    setOpen(false)
+                }}
                 BackdropProps={{
                     sx: {
                         background: "#00000938",
@@ -110,7 +113,7 @@ const HomeHeroWrap = styled.section`
   align-items: center;
   position: relative;
   overflow: hidden;
-  
+
   .action {
     height: 180px;
     background-color: #ffffff;
@@ -119,9 +122,9 @@ const HomeHeroWrap = styled.section`
     bottom: -270px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
   }
-  
+
   .logo {
-    position: absolute; 
+    position: absolute;
     top: 60px;
     left: 110px;
   }
@@ -162,34 +165,35 @@ const HomeHeroWrap = styled.section`
     position: absolute;
     right: 0;
     top: 50%;
-    
-   
-    
-    &>button {
+
+
+    & > button {
       position: absolute;
       top: -100px;
       left: calc(50% - 100px);
       border-radius: 400px;
-      &>div {
+
+      & > div {
         display: flex;
+
         svg {
-          width: 200px!important;
-          height: auto!important;
+          width: 200px !important;
+          height: auto !important;
         }
       }
     }
-    
-    img {
+
+    img, video {
       height: 70vh;
       object-fit: cover;
       width: 50vw;
       border-top-left-radius: 180px;
       border-bottom-left-radius: 0;
       transform: translateY(-50%);
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
   }
-  
+
   .circle1 {
     position: absolute;
     width: 90vw;
@@ -200,6 +204,14 @@ const HomeHeroWrap = styled.section`
     z-index: -1;
     transform: translate(-65%, -50%);
     background-color: #f6e009;
+    
+    
+    @media(max-width: 1200px) {
+      width: 2000px;
+      height: 2000px;
+      top: 50%;
+      left: 10%;
+    }
   }
 `
 

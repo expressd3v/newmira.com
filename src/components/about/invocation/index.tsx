@@ -14,9 +14,9 @@ const AboutInvocation: FC = () => {
                 <Grid
                     alignItems="center"
                     justifyContent="space-between"
-                    spacing={7}
+                    spacing={{lg: 7, xs: 3}}
                     container>
-                    <Grid xs={8}>
+                    <Grid order={{lg: 1, xs: 2}} lg={8} xs={12}>
                         <p>
                             We are passionate about quality and innovation. We adhere to industry best practices and
                             follow a rigorous quality assurance process to ensure that our software solutions are
@@ -25,7 +25,7 @@ const AboutInvocation: FC = () => {
                             trends.
                         </p>
                     </Grid>
-                    <Grid xs={4}>
+                    <Grid order={{lg: 2, xs: 1}} lg={4} xs={12}>
                         <Image
                             style={{maxWidth: "100%", height: "auto"}}
                             src="/temp/Innovation.png"
@@ -58,6 +58,20 @@ const AboutMissionWrap = styled.section`
     font-size: 24px;
     line-height: 2;
     text-align: justify;
+  }
+
+
+  @media(max-width: 600px) {
+    padding: 40px 0;
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
   }
 `
 

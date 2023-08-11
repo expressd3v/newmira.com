@@ -60,7 +60,7 @@ const GlobalMenu: FC = () => {
                                         </Typography>
                                     </div>
                                 </Grid>
-                                <Grid xs={8}>
+                                <Grid md={8} xs={12}>
                                     <div className="main-menu">
                                         <Link className="menu-item" href="/">Home</Link>
                                         <Link className="menu-item" href="/services">Services</Link>
@@ -69,17 +69,17 @@ const GlobalMenu: FC = () => {
                                         <Link className="menu-item" href="/contact">Contact us</Link>
                                     </div>
                                 </Grid>
-                                <Grid xs={4}>
+                                <Grid sx={{display: {md: "block", xs: "none"}}} md={4} xs={12}>
                                     <Stack
                                         alignItems="flex-end"
                                         className="contact-menu-wrap">
-                                        <Link className="contact-menu" href="mailto:steve@newmira.com">steve@newmira.com</Link>
-                                        <Link className="contact-menu" href="mailto:steve@newmira.com">+1 253 533 2244</Link>
+                                        <Link className="contact-menu" href="mailto:info@newmira.com">info@newmira.com</Link>
+                                        <Link className="contact-menu" href="tel:+1 (415) 766-7183">(415) 766-7183</Link>
                                         <p className="contact-menu">
                                             1600 Shatuck Ave., Suite 216<br/>
                                             Berkeley, California USA 94709
                                         </p>
-                                        <Stack
+                                       {/* <Stack
                                             sx={{width: "!100%", mb: 4}}
                                             spacing={2}
                                             justifyContent="flex-end"
@@ -102,8 +102,9 @@ const GlobalMenu: FC = () => {
                                             >
                                                 <Twitter/>
                                             </IconButton>
-                                        </Stack>
+                                        </Stack>*/}
                                         <Button
+                                            style={{marginTop: 32}}
                                             target="_blank"
                                             href="https://www.google.com/maps/place/1600+Shattuck+Ave.+%23216,+Berkeley,+CA+94709%E7%BE%8E%E5%9B%BD/@37.8781161,-122.2719711,17z/data=!3m1!4b1!4m5!3m4!1s0x80857ea10daae777:0xa3d3b85b8e7b1cd8!8m2!3d37.8781161!4d-122.2693962?entry=ttu"
                                             color="info"
@@ -155,8 +156,8 @@ const MenuWrap = styled(Box)`
   .copy-right {
     position: absolute;
     bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    left: 0;
   }
   
   .main-menu {
@@ -217,6 +218,53 @@ const MenuWrap = styled(Box)`
     display: block;
     text-align: right;
   }
+  
+  
+  @media(max-width: 1200px) {
+    padding: 60px 20px;
+
+    .main-menu {
+      margin-top: 12px;
+    }
+
+    .menu-item {
+      font-size: 42px;
+      letter-spacing: 4px;
+      margin-bottom: 32px;
+    }
+
+
+    .contact-menu-wrap {
+      margin-top: 52px;
+    }
+
+    .contact-menu {
+      line-height: 2.2;
+    }
+  }
+  
+  @media(max-width: 600px) {
+    padding: 40px 20px;
+
+    .main-menu {
+      margin-top: 12px;
+    }
+
+    .menu-item {
+      font-size: 32px;
+      letter-spacing: 4px;
+      margin-bottom: 32px;
+    }
+
+
+    .contact-menu-wrap {
+      margin-top: 52px;
+    }
+
+    .contact-menu {
+      line-height: 2.2;
+    }
+  }
 `
 
 
@@ -230,6 +278,12 @@ const GlobalMenuIcon = styled(Button)`
   height: 62px;
   border-radius: 0 42px 42px 0 ;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  
+  @media(max-width: 600px) {
+    top: 10px;
+    width: 60px;
+    height: 42px;
+  }
   
   svg {
     width: 30px;

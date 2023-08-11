@@ -23,10 +23,11 @@ const HomeContact: FC = () => {
                 <h2>Contact us</h2>
                 <Grid
                     justifyContent="space-between"
-                    spacing={5}
+                    spacing={{lg: 5, xs: 2}}
                     container>
-                    <Grid xs={6}>
+                    <Grid lg={6} xs={12}>
                         <Stack
+                            sx={{ mb: {lg: 0, xs: 6}}}
                             alignItems="flex-start"
                             spacing={3}>
                             <FormControl
@@ -114,7 +115,7 @@ const HomeContact: FC = () => {
                             </Button>
                         </Stack>
                     </Grid>
-                    <Grid xs={4}>
+                    <Grid lg={4} xs={12}>
                         <Typography
                             sx={{
                                 display: "flex",
@@ -135,9 +136,9 @@ const HomeContact: FC = () => {
                                 pl: 3,
                                 gap: 2
                             }}>
-                            +1 253 533 2244
+                            (415) 766-7183
                             <Button
-                                href="tel:+1 253 533 2244"
+                                href="tel:(415) 766-7183"
                                 sx={{borderRadius: 12}}
                                 size="small"
                                 variant="contained">
@@ -167,7 +168,7 @@ const HomeContact: FC = () => {
                                 pl: 3,
                                 gap: 2
                             }}>
-                            steve@newmira.com
+                            info@newmira.com
                         </Typography>
 
                         <Typography
@@ -220,6 +221,10 @@ const HomeContactWrap = styled.section`
   border-bottom: 1px solid #ffffff0f;
   position: relative;
   
+  @media(max-width: 600px) {
+    padding: 60px 0;
+  }
+  
   .map {
     width: 116px;
     height: 92px;
@@ -231,11 +236,30 @@ const HomeContactWrap = styled.section`
     position: absolute;
     right: 0;
     bottom: 102px;
+
+    @media(max-width: 600px) { 
+      bottom: auto;
+      top: 60px;
+      width: 60px;
+      height: 50px;
+      border-top-left-radius: 32px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
   
   h2 {
     font-size: 42px;
     margin-bottom: 42px;
+
+    @media(max-width: 600px) {
+      font-size: 32px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
   }
 `
 

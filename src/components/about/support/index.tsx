@@ -14,9 +14,9 @@ const AboutSupport: FC = () => {
                 <Grid
                     alignItems="center"
                     justifyContent="space-between"
-                    spacing={7}
+                    spacing={{lg: 7, xs: 3}}
                     container>
-                    <Grid xs={4}>
+                    <Grid lg={4} xs={12}>
                         <Image
                             style={{maxWidth: "100%", height: "auto"}}
                             src="/temp/support.jpg"
@@ -24,11 +24,11 @@ const AboutSupport: FC = () => {
                             width={601}
                             height={400}/>
                     </Grid>
-                    <Grid xs={8}>
+                    <Grid lg={8} xs={12}>
                         <p>
                             We view our clients as long-term partners and strive to build lasting relationships based on
                             trust and mutual success. We offer comprehensive support and maintenance services to ensure
-                            that our clients' software remains efficient, secure, and up-to-date even after deployment.
+                            that our clients&apos; software remains efficient, secure, and up-to-date even after deployment.
                             Our dedicated support team is always available to address any concerns or issues that may
                             arise, providing peace of mind and uninterrupted operations.
                         </p>
@@ -59,6 +59,20 @@ const AboutMissionWrap = styled.section`
     font-size: 24px;
     line-height: 2;
     text-align: justify;
+  }
+
+
+  @media(max-width: 600px) {
+    padding: 40px 0;
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
   }
 `
 

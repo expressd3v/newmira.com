@@ -26,16 +26,16 @@ const FaqHero: FC = () => {
                     spacing={3}
                     alignItems="center"
                     container>
-                    <Grid xs={8}>
+                    <Grid order={{lg: 1, xs: 2}} lg={8} xs={12}>
                         <h1><span>Answers</span> to Your Burning Questions</h1>
                         <p>
-                            We understand that making informed decisions requires clarity and transparency. That's why
+                            We understand that making informed decisions requires clarity and transparency. That&apos;s why
                             we have compiled a comprehensive list of common queries to provide you with the information
-                            you need. Whether you're curious about our development process, pricing, or support, we've
+                            you need. Whether you&apos;re curious about our development process, pricing, or support, we&apos;ve
                             got you covered.
                         </p>
                     </Grid>
-                    <Grid xs={4}>
+                    <Grid order={{lg: 2, xs: 1}} lg={4} xs={12}>
                         <Lottie animationData={illus}/>
                     </Grid>
                 </Grid>
@@ -51,11 +51,21 @@ const ServicesHeroWrap = styled.section`
   display: flex;
   align-items: center;
 
+  @media(max-width: 600px) {
+    padding: 160px 0 60px;
+  }
+
+
 
   .logo {
     position: absolute;
     top: 60px;
     left: 110px;
+    @media(max-width: 600px) {
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   svg {
@@ -68,6 +78,9 @@ const ServicesHeroWrap = styled.section`
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 24px;
+    @media(max-width: 600px) {
+      font-size: 36px;
+    }
 
     span {
       color: #f6e009;

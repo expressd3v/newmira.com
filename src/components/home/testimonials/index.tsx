@@ -48,7 +48,7 @@ const HomeTestimonials: FC = () => {
             job: "CEO",
             content: <Fragment>
                 <p>
-                    We couldn't be happier with the software solution delivered by Newmira Digital. They transformed our
+                    We couldn&apos;t be happier with the software solution delivered by Newmira Digital. They transformed our
                     vision into reality, providing us with a user-friendly interface and powerful functionality.
                 </p>
                 <p>
@@ -67,7 +67,7 @@ const HomeTestimonials: FC = () => {
             content: <Fragment>
                 <p>
                     Newmira Digital is a trusted partner that consistently delivers outstanding software solutions.
-                    Their team's deep technical knowledge, combined with their creative problem-solving approach, has
+                    Their team&apos;s deep technical knowledge, combined with their creative problem-solving approach, has
                     resulted in innovative solutions that have given us a competitive edge.
                 </p>
                 <p>
@@ -91,7 +91,7 @@ const HomeTestimonials: FC = () => {
                     and each time they have exceeded our expectations.
                 </p>
                 <p>
-                    Their team's technical prowess, innovative
+                    Their team&apos;s technical prowess, innovative
                     thinking, and attention to detail have resulted in exceptional software solutions that have
                     positively impacted our business operations. We highly recommend Newmira Digital to any organization
                     looking for reliable and cutting-edge software development services.

@@ -156,7 +156,7 @@ const FaqQuestions: FC = () => {
                 <p>
                     Effective communication and collaboration are vital for successful software development projects. At
                     Newmira Digital, we prioritize clear and consistent communication with our clients to ensure a
-                    seamless development process. Here's how we ensure effective communication and collaboration:
+                    seamless development process. Here&apos;s how we ensure effective communication and collaboration:
                 </p>
                 <ul>
                     <li>
@@ -173,7 +173,7 @@ const FaqQuestions: FC = () => {
                     <li>
                         Transparent Documentation: We maintain comprehensive project documentation, including project
                         requirements, specifications, and progress reports. This ensures that all stakeholders are on
-                        the same page and have a clear understanding of the project's status and direction.
+                        the same page and have a clear understanding of the project&apos;s status and direction.
                     </li>
                     <li>
                         Collaboration Tools: We leverage collaboration tools, such as project management systems (e.g.,
@@ -238,6 +238,10 @@ const FaqQuestions: FC = () => {
 const FaqQuestionsWrap = styled.section`
   padding: 120px 0 200px;
 
+  @media(max-width: 600px) {
+    padding: 60px 0 60px;
+  }
+  
   .answer {
     ul {
       margin-bottom: 24px;

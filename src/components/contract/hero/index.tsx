@@ -26,7 +26,7 @@ const ContractHero: FC = () => {
                     spacing={3}
                     alignItems="center"
                     container>
-                    <Grid xs={8}>
+                    <Grid  order={{lg: 1, xs: 2}} lg={8} xs={12}>
                         <h1><span>Get In Touch</span> With Us</h1>
                         <p>
                             We’d love to chat with you to see if we are good fit to run your social media, to bring you
@@ -38,7 +38,7 @@ const ContractHero: FC = () => {
                             or sell your information to any third parties for any reason. Never ever.
                         </p>
                     </Grid>
-                    <Grid xs={4}>
+                    <Grid order={{lg: 2, xs: 1}} lg={4} xs={12}>
                         <Lottie animationData={illus}/>
                     </Grid>
                 </Grid>
@@ -53,12 +53,21 @@ const ServicesHeroWrap = styled.section`
   padding: 200px 0 120px;
   display: flex;
   align-items: center;
+  @media(max-width: 600px) {
+    padding: 160px 0 60px;
+  }
 
 
   .logo {
     position: absolute;
     top: 60px;
     left: 110px;
+
+    @media(max-width: 600px) {
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   svg {
@@ -71,6 +80,9 @@ const ServicesHeroWrap = styled.section`
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 24px;
+    @media(max-width: 600px) {
+      font-size: 36px;
+    }
 
     span {
       color: #f6e009;

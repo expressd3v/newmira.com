@@ -9,7 +9,6 @@ import {useRouter} from "next/router";
 const LayoutFooter: FC = () => {
     const router: any = useRouter();
 
-
     return (
         <FooterWrap>
             <Container maxWidth="xl">
@@ -29,23 +28,23 @@ const LayoutFooter: FC = () => {
                         alt="logo"/>
                 </Typography>
                 <Grid
-                    spacing={5}
+                    spacing={{lg: 5, xs: 2}}
                     justifyContent="center"
                     container>
-                    <Grid xs={6}>
+                    <Grid md={6} xs={12}>
                         <Typography
                             lineHeight={1.8}
                             textAlign="center">
-                            Newmira Digital is a leading software development company based in California, specializing
+                            Newmira Digital is a leading software development company based in Berkeley, California, specializing
                             in delivering innovative solutions to drive digital transformation for businesses.
                         </Typography>
                     </Grid>
                     <Grid xs={12}>
                         <Stack
                             sx={{width: "!00%"}}
-                            spacing={6}
+                            spacing={{md: 6, xs: 1}}
                             justifyContent="center"
-                            direction="row">
+                            direction={{md: "row", xs: "column"}}>
                             <Button
                                 onClick={()=>{router.push("/")}}
                                 color="info">
@@ -77,7 +76,7 @@ const LayoutFooter: FC = () => {
                             </Button>
                         </Stack>
                     </Grid>
-                    <Grid xs={12}>
+                    {/*<Grid xs={12}>
                         <Stack
                             sx={{width: "!00%"}}
                             spacing={6}
@@ -102,7 +101,7 @@ const LayoutFooter: FC = () => {
                                 <Twitter/>
                             </IconButton>
                         </Stack>
-                    </Grid>
+                    </Grid>*/}
                     <Grid xs={12}>
                         <Typography
                             fontSize={12}

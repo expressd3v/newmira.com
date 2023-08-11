@@ -12,10 +12,11 @@ const AboutMission: FC = () => {
                     Our <span>Mission</span>
                 </h2>
                 <Grid
+                    alignItems="center"
                     justifyContent="space-between"
-                    spacing={7}
+                    spacing={{lg: 7, xs: 3}}
                     container>
-                    <Grid xs={4}>
+                    <Grid lg={4} xs={12}>
                         <Image
                             style={{maxWidth: "100%", height: "auto"}}
                             src="/temp/mission.jpg"
@@ -23,7 +24,7 @@ const AboutMission: FC = () => {
                             width={1024}
                             height={576}/>
                     </Grid>
-                    <Grid xs={8}>
+                    <Grid lg={8} xs={12}>
                         <p>
                             Our mission is to revolutionize the way businesses leverage technology to achieve their goals. We
                             strive to create cutting-edge software solutions that enhance efficiency, improve productivity, and
@@ -57,6 +58,20 @@ const AboutMissionWrap = styled.section`
     font-size: 24px;
     line-height: 2;
     text-align: justify;
+  }
+
+
+  @media(max-width: 600px) {
+    padding: 40px 0;
+    
+    h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+    
+    p {
+      font-size: 18px;
+    }
   }
 `
 

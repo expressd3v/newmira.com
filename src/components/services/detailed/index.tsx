@@ -1,14 +1,16 @@
 import React, {FC} from 'react';
 import styled from "@emotion/styled";
-import {Card, CardContent, Container, Stack} from "@mui/material";
+import {Card, CardContent, Container} from "@mui/material";
 import Grid from "@mui/system/Unstable_Grid";
 import Lottie from "lottie-react";
 import web from "./web.json";
 import mobile from "./mobile.json";
+import ecommerce from "./ecommerce.json";
 import ux from "./ux.json";
 import marketing from "./marketing.json";
 import seo from "./seo.json";
 import social from "./social.json";
+import db from "./db.json";
 
 const ServiceDetailed: FC = () => {
     return (
@@ -25,12 +27,12 @@ const ServiceDetailed: FC = () => {
                                 <Grid
                                     alignItems="center"
                                     justifyContent="space-around"
-                                    spacing={6}
+                                    spacing={{lg: 6, xs: 2}}
                                     container>
-                                    <Grid xs={4}>
+                                    <Grid lg={4} xs={12}>
                                         <Lottie animationData={web}/>
                                     </Grid>
-                                    <Grid xs={7}>
+                                    <Grid lg={7} xs={12}>
                                         <h4>
                                             Website Development
                                         </h4>
@@ -62,17 +64,17 @@ const ServiceDetailed: FC = () => {
                     <Grid xs={12}>
                         <Card
                             variant="outlined"
-                            sx={{backgroundColor: "transparent", p: 2, borderRadius: 6}}>
+                            sx={{backgroundColor: "transparent", borderRadius: 6}}>
                             <CardContent>
                                 <Grid
                                     alignItems="center"
                                     justifyContent="space-around"
-                                    spacing={6}
+                                    spacing={{lg: 6, xs: 2}}
                                     container>
-                                    <Grid xs={4}>
+                                    <Grid lg={4} xs={12}>
                                         <Lottie animationData={mobile}/>
                                     </Grid>
-                                    <Grid xs={7}>
+                                    <Grid lg={7} xs={12}>
                                         <h4>
                                             App Development
                                         </h4>
@@ -110,12 +112,88 @@ const ServiceDetailed: FC = () => {
                                 <Grid
                                     alignItems="center"
                                     justifyContent="space-around"
-                                    spacing={6}
+                                    spacing={{lg: 6, xs: 2}}
                                     container>
-                                    <Grid xs={4}>
+                                    <Grid lg={4} xs={12}>
+                                        <Lottie animationData={ecommerce}/>
+                                    </Grid>
+                                    <Grid lg={7} xs={12}>
+                                        <h4>
+                                            e-Commerce Development
+                                        </h4>
+                                        <p>
+                                            We specialize in creating powerful and seamless
+                                            ecommerce solutions that empower businesses to thrive in the online
+                                            marketplace. With our expertise in ecommerce development, we build custom
+                                            platforms that are visually stunning, user-friendly, and optimized for
+                                            driving sales and maximizing conversions.
+                                        </p>
+                                        <p>
+                                            From intuitive product catalogs
+                                            and secure payment gateways to inventory management and seamless customer
+                                            experiences, our ecommerce solutions are tailored to meet your specific
+                                            business goals and exceed customer expectations. Trust us to unlock the
+                                            potential of ecommerce and help you establish a strong online presence that
+                                            drives growth and success.
+                                        </p>
+                                    </Grid>
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Card
+                            variant="outlined"
+                            sx={{backgroundColor: "transparent", borderRadius: 6}}>
+                            <CardContent>
+                                <Grid
+                                    alignItems="center"
+                                    justifyContent="space-around"
+                                    spacing={{lg: 6, xs: 2}}
+                                    container>
+                                    <Grid lg={4} xs={12}>
+                                        <Lottie animationData={db}/>
+                                    </Grid>
+                                    <Grid lg={7} xs={12}>
+                                        <h4>
+                                            Database Development
+                                        </h4>
+                                        <p>
+                                            At Newmira Digital, we have extensive expertise in database development,
+                                            enabling businesses to efficiently manage and leverage their data for
+                                            optimal performance and decision-making. Our team of skilled database
+                                            developers designs and builds robust and scalable database solutions
+                                            tailored to your specific requirements.
+                                        </p>
+                                        <p>
+                                            Whether it&apos;s designing a relational
+                                            database, implementing data warehousing solutions, or optimizing existing
+                                            databases, we ensure data integrity, security, and accessibility. With our
+                                            deep understanding of database technologies and best practices, we provide
+                                            comprehensive solutions that enhance data management, improve data-driven
+                                            insights, and support the growth and success of your business. Trust us to
+                                            develop a robust database infrastructure that empowers you to harness the
+                                            full potential of your data assets.
+                                        </p>
+                                    </Grid>
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Card
+                            variant="outlined"
+                            sx={{backgroundColor: "transparent", borderRadius: 6}}>
+                            <CardContent>
+                                <Grid
+                                    alignItems="center"
+                                    justifyContent="space-around"
+                                    spacing={{lg: 6, xs: 2}}
+                                    container>
+                                    <Grid lg={4} xs={12}>
                                         <Lottie animationData={ux}/>
                                     </Grid>
-                                    <Grid xs={7}>
+                                    <Grid lg={7} xs={12}>
                                         <h4>
                                             UI/UX DESIGNING
                                         </h4>
@@ -153,12 +231,12 @@ const ServiceDetailed: FC = () => {
                                 <Grid
                                     alignItems="center"
                                     justifyContent="space-around"
-                                    spacing={6}
+                                    spacing={{lg: 6, xs: 2}}
                                     container>
-                                    <Grid xs={4}>
+                                    <Grid lg={4} xs={12}>
                                         <Lottie animationData={marketing}/>
                                     </Grid>
-                                    <Grid xs={7}>
+                                    <Grid lg={7} xs={12}>
                                         <h4>
                                             DIGITAL MARKETING
                                         </h4>
@@ -196,19 +274,21 @@ const ServiceDetailed: FC = () => {
                                 <Grid
                                     alignItems="center"
                                     justifyContent="space-around"
-                                    spacing={6}
+                                    spacing={{lg: 6, xs: 2}}
                                     container>
-                                    <Grid xs={4}>
+                                    <Grid lg={4} xs={12}>
                                         <Lottie animationData={seo}/>
                                     </Grid>
-                                    <Grid xs={7}>
+                                    <Grid lg={7} xs={12}>
                                         <h4>
                                             SEO & CONTENT WRITING
                                         </h4>
                                         <p>
-                                            Search engine optimization (SEO) is essential for improving your website's
+                                            Search engine optimization (SEO) is essential for improving your
+                                            website&apos;s
                                             visibility and driving targeted organic traffic. Our SEO specialists conduct
-                                            in-depth keyword research, analyze your website's performance, and optimize
+                                            in-depth keyword research, analyze your website&apos;s performance, and
+                                            optimize
                                             various on-page and off-page elements to enhance your search engine
                                             rankings. We stay up-to-date with the latest SEO trends and algorithms to
                                             ensure that your website remains competitive and visible in search engine
@@ -217,7 +297,8 @@ const ServiceDetailed: FC = () => {
                                         <p>
                                             Content writing plays a crucial role in SEO success. Our talented content
                                             writers create compelling, informative, and keyword-rich content that
-                                            resonates with your target audience. Whether it's website copy, blog posts,
+                                            resonates with your target audience. Whether it&apos;s website copy, blog
+                                            posts,
                                             articles, or social media content, we craft high-quality content that
                                             engages readers and encourages them to take action. Our content writing
                                             services are tailored to your industry and target audience, helping you
@@ -237,12 +318,12 @@ const ServiceDetailed: FC = () => {
                                 <Grid
                                     alignItems="center"
                                     justifyContent="space-around"
-                                    spacing={6}
+                                    spacing={{lg: 6, xs: 2}}
                                     container>
-                                    <Grid xs={4}>
+                                    <Grid lg={4} xs={12}>
                                         <Lottie animationData={social}/>
                                     </Grid>
-                                    <Grid xs={7}>
+                                    <Grid lg={7} xs={12}>
                                         <h4>
                                             Social Media & Reputation Management
                                         </h4>
@@ -256,12 +337,14 @@ const ServiceDetailed: FC = () => {
                                             and engage your audience, drive website traffic, and foster brand loyalty.
                                         </p>
                                         <p>
-                                            Online reputation management is crucial in today's digital landscape. We
+                                            Online reputation management is crucial in today&apos;s digital landscape.
+                                            We
                                             understand the importance of maintaining a positive brand image and managing
                                             your online reputation effectively. Our reputation management specialists
                                             monitor online conversations, reviews, and mentions of your brand across
                                             various platforms. We address customer feedback promptly, manage negative
-                                            reviews and comments, and work proactively to enhance your brand's online
+                                            reviews and comments, and work proactively to enhance your brand&apos;s
+                                            online
                                             reputation.
                                         </p>
                                     </Grid>
@@ -280,6 +363,9 @@ const ServiceDetailedWrap = styled.section`
   padding: 100px 0;
   border-top: 1px solid #ffffff0f;
   border-bottom: 1px solid #ffffff0f;
+  @media(max-width: 600px) {
+    padding: 60px 0;
+  }
 
   h4 {
     font-size: 32px;

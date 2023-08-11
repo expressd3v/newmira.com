@@ -14,7 +14,7 @@ const AboutPage: NextPage = () => {
     return (
         <AppLayout>
             <AboutHero/>
-            <HomeTeam/>
+            {/*<HomeTeam/>*/}
             <AboutMission/>
             <Container><Divider/></Container>
             <AboutExpertise/>
